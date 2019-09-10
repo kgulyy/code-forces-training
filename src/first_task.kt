@@ -1,16 +1,10 @@
 import java.math.BigInteger
 
 fun main() {
-    val array = readNumbers()
-    println(array.sum())
+    val numbers = readNumbers()
+    println(numbers.sum())
 }
 
 fun readNumbers(separator: Char = ' ') = readLine()!!.split(separator)
 
-fun Iterable<String>.sum(): BigInteger {
-    var sum = BigInteger.ZERO
-    for (element in this) {
-        sum = sum.plus(element.toBigInteger())
-    }
-    return sum
-}
+fun List<String>.sum() = this.fold(BigInteger.ZERO) {sum, number -> sum + number.toBigInteger()}
