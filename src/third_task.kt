@@ -1,9 +1,9 @@
 fun main() {
-    val words: List<String> = readWords()
+    val words = readWords()
     println(words.joinToString("") { it.trim() })
 }
 
-fun readWords(separator: Char = ' '): List<String> = readLine()!!.split(separator)
+fun readWords(separator: Char = ' ') = readLine()!!.split(separator)
 
 fun String.trim(): String {
     val start = this.indexOfFirst { it.isLetter() } * 2
