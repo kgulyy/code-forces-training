@@ -7,4 +7,4 @@ fun main() {
 
 fun readNumbers(separator: Char = ' ') = readLine()!!.split(separator)
 
-fun List<String>.sum() = this.fold(BigInteger.ZERO) {sum, number -> sum + number.toBigInteger()}
+fun List<String>.sum() = this.fold(BigInteger.ZERO) { sum, number -> sum + number.toBigInteger() }
