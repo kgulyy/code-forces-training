@@ -1,14 +1,14 @@
 import java.math.BigInteger
 
 fun main() {
-    var array : List<String> = readNumbers()
+    val array = readNumbers()
     println(array.sum())
 }
 
 fun readNumbers(separator: Char = ' ') = readLine()!!.split(separator)
 
 fun Iterable<String>.sum(): BigInteger {
-    var sum: BigInteger = BigInteger.ZERO
+    var sum = BigInteger.ZERO
     for (element in this) {
         sum = sum.plus(element.toBigInteger())
     }

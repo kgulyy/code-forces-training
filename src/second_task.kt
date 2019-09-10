@@ -2,8 +2,8 @@ import kotlin.math.PI
 import kotlin.math.pow
 
 fun main() {
-    var radius : Double = readRadius()
+    val radius = readRadius()
     println(radius.pow(2) * PI)
 }
 
-fun readRadius() : Double = readLine()!!.toDouble()
+fun readRadius() = readLine()!!.toDouble()
